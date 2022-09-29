@@ -10,6 +10,7 @@
     flex-direction: row-reverse;
 }
 .parent-container1{
+    position:relative;
     display:flex;
     flex-direction: column;
     height:400px;
@@ -23,6 +24,10 @@
 }
 .footer-section{
     background-color: blueviolet;
+    position:absolute;
+    bottom:0;
+    width:100%;
+
 }
 .main-section{
     overflow: auto;
@@ -47,18 +52,14 @@
 .main{
     display:flex;
     flex-direction: column;
-    text-align: center;
     height:375px;
 }
 .items{
     overflow: auto;
+    margin:auto;
 }
-.subtotal{
-    position: sticky;
-    bottom: 0;
-} 
 
-.items:empty+ .subtotal{
+.items:empty~ .subtotal{
     display:none;
 }
 .items:empty::after{
